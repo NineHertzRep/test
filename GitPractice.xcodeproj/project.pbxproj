@@ -12,6 +12,8 @@
 		BE584E011EC9866B00DE53E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE584DFF1EC9866B00DE53E2 /* Main.storyboard */; };
 		BE584E031EC9866B00DE53E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE584E021EC9866B00DE53E2 /* Assets.xcassets */; };
 		BE584E061EC9866B00DE53E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE584E041EC9866B00DE53E2 /* LaunchScreen.storyboard */; };
+		BEA2B2601EC9C25C00A54F52 /* TPFloatRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2B25F1EC9C25C00A54F52 /* TPFloatRatingView.m */; };
+		BEA2B2631EC9C29E00A54F52 /* RatingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA2B2621EC9C29E00A54F52 /* RatingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		BE584E021EC9866B00DE53E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE584E051EC9866B00DE53E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE584E071EC9866B00DE53E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA2B25D1EC9C25A00A54F52 /* GitPractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitPractice-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEA2B25E1EC9C25C00A54F52 /* TPFloatRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFloatRatingView.h; sourceTree = "<group>"; };
+		BEA2B25F1EC9C25C00A54F52 /* TPFloatRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFloatRatingView.m; sourceTree = "<group>"; };
+		BEA2B2621EC9C29E00A54F52 /* RatingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingScreen.swift; path = RatingScreen/RatingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		BE584DFA1EC9866B00DE53E2 /* GitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BEA2B25C1EC9C24000A54F52 /* HelpingFiles */,
+				BEA2B2611EC9C28000A54F52 /* RatingScreen */,
 				BE584DFB1EC9866B00DE53E2 /* AppDelegate.swift */,
 				BE584DFD1EC9866B00DE53E2 /* ViewController.swift */,
 				BE584DFF1EC9866B00DE53E2 /* Main.storyboard */,
@@ -62,6 +70,24 @@
 				BE584E071EC9866B00DE53E2 /* Info.plist */,
 			);
 			path = GitPractice;
+			sourceTree = "<group>";
+		};
+		BEA2B25C1EC9C24000A54F52 /* HelpingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BEA2B25E1EC9C25C00A54F52 /* TPFloatRatingView.h */,
+				BEA2B25F1EC9C25C00A54F52 /* TPFloatRatingView.m */,
+				BEA2B25D1EC9C25A00A54F52 /* GitPractice-Bridging-Header.h */,
+			);
+			name = HelpingFiles;
+			sourceTree = "<group>";
+		};
+		BEA2B2611EC9C28000A54F52 /* RatingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BEA2B2621EC9C29E00A54F52 /* RatingScreen.swift */,
+			);
+			name = RatingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE584DFE1EC9866B00DE53E2 /* ViewController.swift in Sources */,
+				BEA2B2601EC9C25C00A54F52 /* TPFloatRatingView.m in Sources */,
+				BEA2B2631EC9C29E00A54F52 /* RatingScreen.swift in Sources */,
 				BE584DFC1EC9866B00DE53E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GitPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anveshan.GitPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitPractice/GitPractice-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -261,10 +292,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = GitPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anveshan.GitPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitPractice/GitPractice-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -287,6 +320,7 @@
 				BE584E0C1EC9866B00DE53E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

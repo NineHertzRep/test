@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="POp-Tm-Z5u">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,10 +22,11 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GHy-zC-F7K"/>
+                                    <segue destination="CfZ-EB-8fV" kind="show" id="m0S-87-WPw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="git practice project for creating repository" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp0-tL-Jpg">
-                                <rect key="frame" x="20" y="67" width="560" height="21"/>
+                                <rect key="frame" x="20" y="111" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="560" id="Slg-eu-UiF"/>
                                 </constraints>
@@ -43,10 +44,64 @@
                             <constraint firstItem="Jp0-tL-Jpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Y4K-bf-p7p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RY2-n7-NC8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="295"/>
+            <point key="canvasLocation" x="380" y="227"/>
+        </scene>
+        <!--Rating Screen-->
+        <scene sceneID="2W0-kM-xQQ">
+            <objects>
+                <viewController id="CfZ-EB-8fV" customClass="RatingScreen" customModule="GitPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vsO-Ke-5VG"/>
+                        <viewControllerLayoutGuide type="bottom" id="UOj-pt-8Yp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HRx-gf-iuT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9k-n5-zy6" customClass="TPFloatRatingView">
+                                <rect key="frame" x="20" y="134" width="560" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QlD-hd-O2d"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B9k-n5-zy6" secondAttribute="trailing" constant="20" id="c5b-RO-hd0"/>
+                            <constraint firstItem="B9k-n5-zy6" firstAttribute="top" secondItem="vsO-Ke-5VG" secondAttribute="bottom" constant="70" id="fdT-tj-0Ii"/>
+                            <constraint firstItem="B9k-n5-zy6" firstAttribute="leading" secondItem="HRx-gf-iuT" secondAttribute="leading" constant="20" id="hdO-wE-YPh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewRating" destination="B9k-n5-zy6" id="Hcw-Xk-8bl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYU-gB-J8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="214"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HYf-mc-5ml">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="POp-Tm-Z5u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T8K-5s-E9i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bMP-IG-4N9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDL-Gf-ngm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-432" y="227"/>
         </scene>
     </scenes>
 </document>
