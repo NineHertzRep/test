@@ -24,16 +24,29 @@
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GHy-zC-F7K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="git practice project for creating repository" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp0-tL-Jpg">
+                                <rect key="frame" x="20" y="67" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="Slg-eu-UiF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x2X-8H-zqe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="36B-4D-9Yp"/>
+                            <constraint firstAttribute="trailing" secondItem="Jp0-tL-Jpg" secondAttribute="trailing" constant="20" id="6Nb-4z-g6R"/>
+                            <constraint firstItem="Jp0-tL-Jpg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="AIZ-Ac-nSM"/>
                             <constraint firstItem="x2X-8H-zqe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SGc-tN-AwY"/>
+                            <constraint firstItem="Jp0-tL-Jpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Y4K-bf-p7p"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="295"/>
         </scene>
     </scenes>
 </document>
